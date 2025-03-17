@@ -1,0 +1,168 @@
+/*@import url(https://db.onlinewebfonts.com/c/e7322a6673613ab13604fadda3d20e56?family=VALORANT);*/
+
+.crd_bdy {
+  background-image: url("./image/tea.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  padding: 0;
+  margin: 0;
+  font-family: VALORANT;
+  height: 541px;
+}
+
+.crd_bdy:has(.gym-crd:hover) {
+  background-image: url("./image/gym3.jpg");
+}
+
+.crd_bdy:has(.yoga-crd:hover) {
+  background-image: url("./image/yoga3.jpg");
+}
+
+.crd_bdy:has(.aayr-crd:hover) {
+  background-image: url("./image/aayr3.jpg");
+  /*background-size: cover;*/
+  /*width: 100%;*/
+}
+.crd_bdy:has(.spa-crd:hover) {
+  background-image: url("./image/spa3.jpg");
+   /*background-size: cover;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*object-position: ;*/
+}
+
+/*.contanr {
+  display: flex;
+  backdrop-filter: blur(4px);
+  height: 100vh;
+}*/
+
+.crd-contanr {
+  position: relative;
+  /*height: 450px;*/
+  width: fit-content;
+  display: flex;
+  justify-content:center;
+  margin: 0 auto;
+  perspective: 1000px;
+  cursor: pointer;
+  margin-top: 10%;
+  height: 345px
+}
+
+.crd-contanr .crd {
+  width: 250px;
+  height: 350px;
+
+  background: url(./image/yoga.jpg);
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transition: all 0.1s linear;
+}
+
+.crd-contanr .gym {
+  background: url(./image/gym.jpg);
+  background-size: cover;
+}
+.crd-contanr .aayr {
+  background: url(./image/aayr.jpg);
+  background-size: cover;
+}
+.crd-contanr .spa {
+  background: url(./image/spa.jpg);
+  background-size: cover;
+}
+
+.crd-contanr::before {
+  position: absolute; 
+  color: white;
+  font-size: 42px;
+  bottom: 10px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 0.4s linear;
+}
+
+.crd-contanr .crd::after {
+  content: '';
+  position: absolute; 
+  z-index: 1;
+  bottom: 0;
+  height: 100px;
+  width: 90%;
+  /*background: rgb(243,236,230);*/
+/*background: linear-gradient(180deg, transparent 20%, rgba(0,0,0,0.8) 100%);*/
+  
+}
+
+.gym-crd::before {
+  content: 'G Y M';
+  font-size: 32px;
+}
+
+.yoga-crd::before {
+  content: 'Y O G A';
+}
+.aayr-crd::before {
+  content: 'A Y U R V E D A';
+}
+.spa-crd::before {
+  content: 'S P A';
+}
+
+.avtr {
+  position: absolute;
+  bottom: 0;
+  width: 280px;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(0);
+  transition: transform 0.3s linear, opacity 0.3s linear;
+}
+
+.gym-crd .avtr {
+  height: 300px;
+  width: 300px;
+}
+
+.yoga-crd .avtr {
+  width: 300px;
+  height: 300px;
+}
+.aayr-crd .avtr {
+  width: 300px;
+  height: 300px;
+}
+.spa-crd .avtr {
+  width: 300px;
+  height: 300px;
+}
+
+
+.crd-contanr:hover .avtr {
+  transform: translateY(-20%);
+  opacity: 1;
+}
+
+.crd-contanr:hover .crd {
+  transform: rotateX(20deg);
+  padding: 10px
+}
+
+.crd-contanr:hover::before {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+
+.crd-contanr:hover {
+  -webkit-box-shadow: 0px 45px 90px 0px rgb(233 242 250);
+-moz-box-shadow:0px 45px 90px 0px rgb(233 242 250);
+box-shadow: 0px 45px 90px 0px rgb(233 242 250);
+}
+ /*0px 45px 90px 0px rgba(0,0,0,0.75);*/
